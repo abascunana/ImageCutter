@@ -31,7 +31,7 @@ class ImageCutter(object):
                 imgB = img.crop((w * self.percentageR.get() / 100, 0, w * self.margeL.get() / 100, h))
                 return imgA, imgB
         except wrongMargin:
-            messagebox.showerror(":c error", "marge must be bigger than percentage")
+            messagebox.showerror(":c error", "margin must be bigger than percentage")
 
 
     def stop_program(self):
@@ -72,7 +72,7 @@ class ImageCutter(object):
         self.percentageR.pack(pady=22)
 
         Tmarge = tkinter.Text(root, height=1, width=11)
-        Tmarge.insert(tkinter.END, "Right marge")
+        Tmarge.insert(tkinter.END, "Right margin")
         Tmarge.config(state='disabled')
         Tmarge.pack(pady=23)
 
